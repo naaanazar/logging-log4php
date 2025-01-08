@@ -126,9 +126,9 @@ class LoggerAppenderFile extends LoggerAppender {
 		}
 		
 		if ($this->locking) {
-			$this->writeWithLocking($string);
+			$this->writeWithLocking($string ?? '');
 		} else {
-			$this->writeWithoutLocking($string);
+			$this->writeWithoutLocking($string ?? '');
 		}
 	}
 	
